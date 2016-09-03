@@ -19,7 +19,7 @@ react-router is available on npm :
 
 ## Configuring the fallback url
 
-Before implementing react-router, we need to configure our back-end. Indeed, our back-end is not currently aware of the declared routes in react-router. If you are trying directly an URL declared in react-router without configuration, you will get an 404, since you will be first requesting a url that the back-end is not aware of. You need to configure a fallback URL, to serve index.html on an unknown URL so that in the front-end, react-router can handle the request.
+Before implementing react-router, we need to configure our back-end. Indeed, our back-end is not currently aware of the declared routes in react-router. If you refresh your page or try to access directly an URL declared in react-router without having configured your back-end, you will get an 404. You will be first requesting a url that the back-end is not aware of, instead of asking to react-router. You need to configure a fallback URL, to serve index.html on an unknown URL so that in the front-end, react-router can handle the request.
 
 ### Configuring express.js
 If you are serving your index.html from express.js :
