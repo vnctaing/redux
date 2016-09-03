@@ -21,6 +21,7 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.1.2",
+    "react-router": "^2.7.0",
     "redux": "^3.1.2"
   },
   "devDependencies": {

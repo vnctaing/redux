@@ -1,16 +1,28 @@
 import 'babel-polyfill'
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todoApp from './reducers'
 import App from './components/App'
+import { Router, Route, browserHistory } from 'react-router'
 
-let store = createStore(todoApp)
+
+let store = createStore(todoApp);
+
+const Root = ({ store }) => (
+  <Provider store={store}>
+    <Router>
+      <Route path="/(:filter)" component={App} />
+    </Router>
+  </Provider>
+);
+
+Root.propTypes = {
+  store: PropTypes.object.isRequired,
+};
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Root store={store}/>,
   document.getElementById('root')
 )
