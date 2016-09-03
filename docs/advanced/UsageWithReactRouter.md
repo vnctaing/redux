@@ -140,7 +140,7 @@ When previously we wrote:  `<Route path="/(:filter)" component={App} />`, it mad
 
 `params` property is an object with every param specified in the url. *e.g : `params` will be equal to `{ filter: 'completed' }` if we are navigating to `localhost:3000/completed`. We can now read the URL from `<App />`.*
 
-Note that we are using ES6 destructuring on the properties to pass in `params` to `<VisibleTodoList/>`.
+Note that we are using [ES6 destructuring](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) on the properties to pass in `params` to `<VisibleTodoList/>`.
 
 #### `components/App.js`
 ```js
