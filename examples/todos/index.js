@@ -12,7 +12,7 @@ let store = createStore(todoApp);
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <Router>
+    <Router history={browserHistory}>
       <Route path="/(:filter)" component={App} />
     </Router>
   </Provider>
